@@ -553,6 +553,22 @@ config QPNP_MISC
 	  and the driver provides an API to check if this interrupt
 	  is available on the current PMIC chip.
 
+config TI_DRV8846
+	tristate "TI step motor driver IC"
+	depends on PWM
+	help
+	  Say 'y' here to include support for the H-Bridge Stepper
+	  Motor Driver. The MISC peripheral holds the pwm and the
+	  driver provides an API to drive stepper motor.
+
+config AKM09970
+	tristate "AKM Semiconductor Inc. IC"
+	depends on I2C
+	help
+	  Say "y" here to enable support for the AKM Semiconductor
+	  Inc. sensor.The sensor provides x-y-z triple-axis magnetic
+	  support with digital output.
+
 source "drivers/misc/c2port/Kconfig"
 source "drivers/misc/eeprom/Kconfig"
 source "drivers/misc/cb710/Kconfig"
